@@ -1,43 +1,35 @@
 #include <stdio.h>
 #include <locale.h>
 
-// Função que dá as boas-vindas
-void ola () {
-    printf("Seja bem-vindo ao calculador de horas do curso!\n");
+void ola(){
+    printf("seja bem vindo!");
 }
 
-// Função que calcula o total de horas
-void CalcularHorasCurso (int semestres, int horas_por_mes) {
-    // Cada semestre tem 5 meses, então multiplicamos os semestres por 5
-    int total_meses = semestres * 5;
-   
-    // Agora multiplicamos o total de meses pelas horas de aula mensais
-    int total_horas = total_meses * horas_por_mes;
+void CalcularHorasCurso (int semestres, int horasMes) {
+     int totalMeses = semestres * 5;
+     int totalHoras = totalMeses * horasMes;
 
-    printf("\n--- Resultado do Cálculo ---\n");
-    printf("O seu curso tem um total de %d meses de aula.\n", total_meses);
-    printf("A duração total do seu curso é de: %d horas.\n", total_horas);
+      printf("\nresultado do cálculo");
+    printf("o seu curso tem um total de %d meses de aula.\n", totalMeses);
+    printf("a duração total do seu curso é de: %d horas.\n", totalHoras);
 }
 
-int main () {
-    
+
+int main() {
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
-    
     ola();
 
-    int qtd_semestres = 0;
-    int horas_mensais = 0;
+    int qtdsemestres = 0;
+    int horasmensais = 0;
 
-    
-    printf("\nQuantos semestres tem o seu curso? ");
-    scanf("%d", &qtd_semestres);
+    printf("\nquantos semestres tem o seu curso? ");
+    scanf("%d", &qtdsemestres);
 
-    printf("Quantas horas de aula você tem por mês? ");
-    scanf("%d", &horas_mensais);
+    printf("\nquantas horas de aula você tem?");
+    scanf("%d", &horasmensais);
 
+    CalcularHorasCurso(qtdsemestres, horasmensais);
 
-    CalcularHorasCurso(qtd_semestres, horas_mensais);
-
-    return 0;
+   return 0;
 }
