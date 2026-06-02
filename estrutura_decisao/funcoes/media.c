@@ -24,7 +24,7 @@ int main()
  scanf("%f", &n1);
 
  printf("\nQual a segunda nota?");
- scanf("%f", &n2);  
+ scanf("%f", &n2);    
 
  calcularMedia (n1, n2);
  
